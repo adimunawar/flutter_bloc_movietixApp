@@ -79,3 +79,16 @@ class GoesToSuccessPage extends PageEvent {
   @override
   List<Object> get props => [ticket, transaction];
 }
+
+class GoesToTicketDetailPage extends PageEvent {
+  final Ticket ticket;
+  GoesToTicketDetailPage(this.ticket);
+
+  @override
+  List<Object> get props => [ticket];
+}
+
+class GoesToProfilePage extends PageEvent {
+  @override
+  List<Object> get props => [];
+}

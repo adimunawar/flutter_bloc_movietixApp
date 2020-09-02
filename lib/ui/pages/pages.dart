@@ -32,6 +32,8 @@ part 'select_seat_page.dart';
 part 'check_out_page.dart';
 part 'success_page.dart';
 part 'ticket_page.dart';
+part 'ticket_detail_page.dart';
+part 'profile_page.dart';
 // Future<File> getImage() async {
 //   var image = await ImagePicker.pickImage(source: ImageSource.gallery);
 
