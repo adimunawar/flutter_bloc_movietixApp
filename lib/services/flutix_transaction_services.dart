@@ -23,13 +23,12 @@ class FLutixTransactionServices {
 
     return documents
         .map((e) => FlutixTransaction(
-              userID: e.data['userID'],
-              title: e.data['title'],
-              subtitle: e.data['subtitle'],
-              time: DateTime.fromMicrosecondsSinceEpoch(e.data['time']),
-              amount: e.data['amount'],
-              picture: e.data['picture'],
-            ))
+            userID: e.data['userID'],
+            title: e.data['title'],
+            subtitle: e.data['subtitle'],
+            time: DateTime.fromMillisecondsSinceEpoch(e.data['time']),
+            amount: e.data['amout'],
+            picture: e.data['picture']))
         .toList();
   }
 }

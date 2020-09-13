@@ -2,6 +2,7 @@ import 'dart:async';
 import 'package:bloc/bloc.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:equatable/equatable.dart';
+import 'package:mytix2/bloc/bloc.dart';
 // import 'package:mytix/bloc/bloc.dart';
 // import 'package:flutix3/bloc/bloc.dart';
 import 'package:mytix2/model/model.dart';
@@ -43,6 +44,10 @@ class PageBloc extends Bloc<PageEvent, PageState> {
       yield OnTicketDetailPage(event.ticket);
     } else if (event is GoesToProfilePage) {
       yield OnProfilePage();
+    } else if (event is GoesToTopUpPage) {
+      yield OnTopUpPage(event.pageEvent);
+    } else if (event is GoesToWalletPage) {
+      yield OnWalletPage(event.pageEvent);
     }
   }
 }
